@@ -1,5 +1,7 @@
 <?php
 
+require_once './vendor/autoload.php';
+
 class Version
 {
     private $body;
@@ -22,7 +24,10 @@ class Version
 //$xss = '<script>alert("xss");</script>';
 $xss = '<b>test</b><br/><img src="#" onerror=alert("xss");>';
 
-$v = new Version();
-$v->setBody($xss);
+$version = new Version();
+$version->setBody($xss);
 
-echo $v->getBody();
+$loader = new Twig_Loader_Filesystem('/');
+$twig = new Twig_Environment($loader);
+
+echo $twig->render('preview_template.html', ['version' => $version->getBody()]);
