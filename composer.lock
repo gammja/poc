@@ -4,20 +4,67 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "eb91a3673766e2f616a81316a50e72ad",
+    "content-hash": "55a6d1be474a46ad095e005d88f56304",
     "packages": [
+        {
+            "name": "ezyang/htmlpurifier",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ezyang/htmlpurifier.git",
+                "reference": "f2ad0618db4f667f127da2c401ef9d0e7d339f88"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/f2ad0618db4f667f127da2c401ef9d0e7d339f88",
+                "reference": "f2ad0618db4f667f127da2c401ef9d0e7d339f88",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2"
+            },
+            "require-dev": {
+                "simpletest/simpletest": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "HTMLPurifier": "library/"
+                },
+                "files": [
+                    "library/HTMLPurifier.composer.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Edward Z. Yang",
+                    "email": "admin@htmlpurifier.org",
+                    "homepage": "http://ezyang.com"
+                }
+            ],
+            "description": "Standards compliant HTML filter written in PHP",
+            "homepage": "http://htmlpurifier.org/",
+            "keywords": [
+                "html"
+            ],
+            "time": "2017-01-06 17:02:37"
+        },
         {
             "name": "twig/twig",
             "version": "1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "91938100bbe5c45fce3c4a1dddfbfcc01a50772c"
+                "reference": "feb9bf539feae70a16862dbf5ff6c3e2570286e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/91938100bbe5c45fce3c4a1dddfbfcc01a50772c",
-                "reference": "91938100bbe5c45fce3c4a1dddfbfcc01a50772c",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/feb9bf539feae70a16862dbf5ff6c3e2570286e6",
+                "reference": "feb9bf539feae70a16862dbf5ff6c3e2570286e6",
                 "shasum": ""
             },
             "require": {
@@ -30,7 +77,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.30-dev"
+                    "dev-master": "1.31-dev"
                 }
             },
             "autoload": {
@@ -38,7 +85,7 @@
                     "Twig_": "lib/"
                 }
             },
-            "notification-url": "http://packagist.org/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -65,13 +112,15 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-12-27 10:58:11"
+            "time": "2017-01-11 16:01:13"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "ezyang/htmlpurifier": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
